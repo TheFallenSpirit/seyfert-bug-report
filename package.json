@@ -1,0 +1,15 @@
+{
+	"dependencies": {
+		"@types/node": "^24.0.13",
+		"dotenv": "^17.2.0",
+		"seyfert": "^3.2.4",
+		"tsc-alias": "^1.8.16",
+		"typescript": "^5.8.3"
+	},
+	"type": "module",
+	"scripts": {
+		"build": "rm -r build; tsc && tsc-alias",
+		"start": "node -r dotenv/config build/index.js",
+		"dev": "pnpm run build && clear && pnpm run start --dev"
+	}
+}
